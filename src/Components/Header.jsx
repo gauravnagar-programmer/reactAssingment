@@ -16,7 +16,10 @@ const Header = () => {
     
     {/* Logo / Brand */}
     <h1 className="text-xl md:text-2xl font-bold tracking-tight">
-      FrontEnd
+      <Link to={"/"}>
+        FrontEnd
+      </Link>
+    
     </h1>
 
     {/* Navigation */}

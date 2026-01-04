@@ -34,18 +34,19 @@ const MainList = () => {
   return (
     <div className="bg-gray-700 md:px-10 px-5  py-3">
       <div className="flex  items-center my-5 space-x-2 justify-between text-white ">
+
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           type="text"
           placeholder="Search With name "
-          className=" border-gray-500 px-3 py-2  focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-full border"
+          className=" border-gray-500 md:px-3  px-1 py-1 md:py-2 text-sm md:text-[15px] focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-full border"
         />
 
-        <div className="flex items-center space-x-3 ">
-          <p>Switch To : </p>
+        <div className="flex flex-col items-center   md:flex-row  md:space-x-3 md:space-y-0 space-y-3 ">
+          <p className="text-xs">Switch To : </p>
           <p
-            className="font-bold cursor-pointer bg-blue-500 px-3 py-1 rounded-full"
+            className="font-bold cursor-pointer bg-blue-500 px-3 py-1  rounded-full"
             onClick={() => setIsListActive(!isListActive)}
           >
             {isListActive ? "Card" : "Table"}
@@ -140,13 +141,13 @@ const MainList = () => {
       {
       filterData.length > 0 && <div className="flex font-semibold items-center space-x-4 my-10 justify-center text-white">
         <button onClick={() => handlePage(page - 1)} 
-        className={`px-3 py-1 rounded-full bg-blue-500 cursor-pointer `}>Prev</button>
+        className="md:px-3 px-1 py-0.5 rounded-full bg-blue-500 cursor-pointer ">Prev</button>
         {
           [...Array(Math.ceil(filterData.length / 10))].map((_,index) =>{
-            return <button onClick={() => handlePage(index + 1)} className={`px-3 py-1 border border-gray-300 hover:bg-white cursor-pointer active:bg-white active:text-gray-900 hover:text-gray-900 ${page === index + 1 ? "bg-blue-500 border-none" : ""}`}  key={index}>{index + 1} </button>
+            return <button onClick={() => handlePage(index + 1)} className={`md:px-3 px-1 md:py-1 border border-gray-300 hover:bg-white cursor-pointer active:bg-white active:text-gray-900 hover:text-gray-900 ${page === index + 1 ? "bg-blue-500 border-none" : ""}`}  key={index}>{index + 1} </button>
           })
         }
-        <button onClick={() => handlePage(page + 1)}  className="px-3 py-1 rounded-full bg-blue-500  cursor-pointer">Next</button>
+        <button onClick={() => handlePage(page + 1)}  className="md:px-3 px-1 py-0.5 md:py-1 rounded-full bg-blue-500  cursor-pointer">Next</button>
         </div>
         }
         {

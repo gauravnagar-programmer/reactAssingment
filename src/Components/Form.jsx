@@ -71,7 +71,7 @@ const ProductForm = () => {
       <h1 className="text-white text-3xl font-bold"> Enter Your Product</h1>
       <form
         onSubmit={handleSubmit}
-        className="max-w-4xl min-w-sm rounded-md   bg-white px-5 py-3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+        className="max-w-4xl sm:max-w-md   w-full   rounded-md   bg-white px-5 py-3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
       >
         {/* Name */}
         <div className="flex flex-col">
