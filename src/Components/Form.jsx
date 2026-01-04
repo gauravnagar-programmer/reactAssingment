@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ErrorMessage, WarningMessage } from "./Utils/InfoMessage";
+import { ErrorMessage, SuccessMessage, WarningMessage } from "./Utils/InfoMessage";
 
 const ProductForm = () => {
   const [totalForm, setTotalForm] = useState([]);
@@ -37,6 +37,7 @@ const ProductForm = () => {
       }
 
       setTotalForm((prev) => [...prev, inputValue]);
+      SuccessMessage('Product submit successfully')
       setInputValue({
         name: "",
         price: "",

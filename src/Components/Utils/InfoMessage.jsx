@@ -14,4 +14,11 @@ const ErrorMessage = (message) => {
   });
 }
 
-export {WarningMessage,ErrorMessage};
+const SuccessMessage = (message) => {
+  toast.success(message, {
+    position: "top-right", 
+    autoClose : 1500 
+  });
+}
+
+export {WarningMessage,ErrorMessage,SuccessMessage};
